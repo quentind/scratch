@@ -5,12 +5,13 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: '<json:package.json>',
 		meta: {
-			banner:	'/*** \n' +
-					' * <%= pkg.title %> \n' +
-					' * - \n' +
-					' * Version <%= pkg.version %> \n' +
-					' * <%= grunt.template.today("dddd, mmmm dS, yyyy, HH:MM:ss") %>\n' +
-					' */'
+			banner:
+				'/*** \n' +
+				' * <%= pkg.title %> \n' +
+				' * - \n' +
+				' * Version <%= pkg.version %> \n' +
+				' * <%= grunt.template.today("dddd, mmmm dS, yyyy, HH:MM:ss") %>\n' +
+				' */'
 		},
 
 		lint: {
