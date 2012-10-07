@@ -1,3 +1,3 @@
-# TITLE
+# Scratch
 
-Starting point for new builds.
+This is my starting point for new builds.
