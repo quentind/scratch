@@ -1,5 +1,3 @@
 TODO:
 
-Print (?)
-
-+ typo tricks http://www.smashingmagazine.com/2011/08/15/mind-your-en-and-em-dashes-typographic-etiquette/
+Print CSS (?)
