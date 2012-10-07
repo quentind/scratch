@@ -2,7 +2,7 @@
  * Project Title 
  * - 
  * Version 0.1 
- * Friday, October 5th, 2012, 12:05:21
+ * Sunday, October 7th, 2012, 22:37:59
  */
 
 /* normalize.css v2.0.1  MIT License  git.io/normalize */
@@ -380,140 +380,235 @@ table {
  border-collapse: collapse;
  border-spacing: 0;
 }
+/* ====================================================
+   HELPER
+   - 
+   Helper classes, mostly from H5BP.
+   ==================================================== */
 
-/* ==========================================================================
-Helper classes
-========================================================================== */
-
-/*
-* Image replacement
-*/
-
+/***
+ * Image replacement
+ */
 .ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    /* IE 6/7 fallback */
-    *text-indent: -9999px;
+	background-color:transparent;
+	border:0;
+	overflow:hidden;
+	/* IE 6/7 fallback */
+	*text-indent:-9999px;
 }
 
 .ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 100%;
+	content:"";
+	display:block;
+	width:0;
+	height:100%;
 }
 
-/*
-* Hide from both screenreaders and browsers: h5bp.com/u
-*/
-
+/***
+ * Hide from both screenreaders and browsers:h5bp.com/u
+ */
 .hidden {
-    display: none !important;
-    visibility: hidden;
+	display:none !important;
+	visibility:hidden;
 }
 
-/*
-* Hide only visually, but have it available for screenreaders: h5bp.com/v
-*/
-
+/***
+ * Hide only visually, but have it available for screenreaders:h5bp.com/v
+ */
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+	border:0;
+	clip:rect(0 0 0 0);
+	height:1px;
+	margin:-1px;
+	overflow:hidden;
+	padding:0;
+	position:absolute;
+	width:1px;
 }
 
-/*
-* Extends the .visuallyhidden class to allow the element to be focusable
-* when navigated to via the keyboard: h5bp.com/p
-*/
-
+/***
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard:h5bp.com/p
+ */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+	clip:auto;
+	height:auto;
+	margin:0;
+	overflow:visible;
+	position:static;
+	width:auto;
 }
 
-/*
-* Hide visually and from screenreaders, but maintain layout
-*/
-
+/***
+ * Hide visually and from screenreaders, but maintain layout
+ */
 .invisible {
-    visibility: hidden;
+	visibility:hidden;
 }
 
-/*
-* Clearfix: contain floats
-*
-* For modern browsers
-* 1. The space content is one way to avoid an Opera bug when the
-* `contenteditable` attribute is included anywhere else in the document.
-* Otherwise it causes space to appear at the top and bottom of elements
-* that receive the `clearfix` class.
-* 2. The use of `table` rather than `block` is only necessary if using
-* `:before` to contain the top-margins of child elements.
-*/
-
+/***
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ * `contenteditable` attribute is included anywhere else in the document.
+ * Otherwise it causes space to appear at the top and bottom of elements
+ * that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ * `:before` to contain the top-margins of child elements.
+ */
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+	content:" "; /* 1 */
+	display:table; /* 2 */
 }
 
 .clearfix:after {
-    clear: both;
+	clear:both;
 }
 
-/*
-* For IE 6/7 only
-* Include this rule to trigger hasLayout and contain floats.
-*/
-
-.clearfix {
-    *zoom: 1;
-}
 /***
- * TYPOGRAPHY
- ***/
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+	*zoom:1;
+}
+
+/***
+ * Floats
+ */
+.f-right {
+	float:right;
+}
+
+.f-left {
+	float:left;
+}
+/* ====================================================
+   TYPOGRAPHY
+   - 
+   Define basic styles for 'content' elements.
+   ==================================================== */
+
+/***
+ * HEADINGS
+ */
 h1, .h1 {
 
+	/* Text */
+	font-size:;
+	font-weight:;
+	line-height:;
 }
 
 h2, .h2 {
 	
+	/* Text */
+	font-size:;
+	font-weight:;
+	line-height:;
 }
 
 h3, .h3 {
 	
+	/* Text */
+	font-size:;
+	font-weight:;
+	line-height:;
 }
 
 h4, .h4 {
 	
+	/* Text */
+	font-size:;
+	font-weight:;
+	line-height:;
 }
 
 h5, .h5 {
 	
+	/* Text */
+	font-size:;
+	font-weight:;
+	line-height:;
 }
 
 h6, .h6 {
 	
+	/* Text */
+	font-size:;
+	font-weight:;
+	line-height:;
 }
+
+/***
+ * PARAGRAPH
+ */
+p {
+	margin:0 0 1em;
+}
+
+p:last-child {
+	margin:0;
+}
+
+/*** 
+ * LISTS
+ */
+.no-list {
+
+	/* Reset list */
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+li > ul,
+li > ol {
+	margin-bottom:0;
+}
+
+/***
+ * TEXT ALIGN
+ */
+.t-r { text-align:right; }
+.t-c { text-align:center; }
+.t-j {
+	text-align:justify;
+
+	/* Better add lang attr on HTML tag to specify hyphenation dictionary (HTTP header is OK too). */
+	/* OS language settings quirks (ie. "Australian English" as default language), see comments in: http://blog.fontdeck.com/post/9037028497/hyphens */
+	-webkit-hyphens:auto;
+	   -moz-hyphens:auto;
+			hyphens:auto;
+}
+
+/***
+ * MISCELLANEOUS
+ */
+.info { cursor:help; }
+.wait { cursor:wait; }
+.drag { cursor:move; }
+.drag-h { cursor:w-resize; }
+.drag-v { cursor:n-resize; }
+
+
+/* ====================================================
+   LAYOUT MODULES
+   - 
+   IE: media element (= block), grid
+   ==================================================== */
+
 /***
  * GRID SYSTEM
  * -
- * https://github.com/stubbornella/oocss/blob/master/core/grid/grids.css
- * Added round fix
+ * Credit: https://github.com/stubbornella/oocss/blob/master/core/grid/grids.css
+ * Added round fix + naming convention
  */
-.line, .lastUnit {
+.line,
+.unit-last {
 	overflow:hidden;
 	*overflow:visible;
 	*zoom:1;
@@ -523,24 +618,24 @@ h6, .h6 {
 	float:left;
 }
 
-.unitRight {
+.unit-right {
 	float:right;
 }
 
-.size1of1 {float:none;}
-.size1of2 {width:50%;}
-.size1of3 {width:33.33333%;}
-.size2of3 {width:66.66666%;}
-.size1of3.round {width:34%;} /* Round fix */
-.size2of3.round {width:66%;} /* Round fix */
-.size1of4 {width:25%;}
-.size3of4 {width:75%;}
-.size1of5 {width:20%;}
-.size2of5 {width:40%;}
-.size3of5 {width:60%;}
-.size4of5 {width:80%;}
+.size1of1 { float:none; }
+.size1of2 { width:50%; }
+.size1of3 { width:33.33333%; }
+.size2of3 { width:66.66666%; }
+.size1of3.round {width:34%; } /* Round fix */
+.size2of3.round {width:66%; } /* Round fix */
+.size1of4 { width:25%; }
+.size3of4 { width:75%; }
+.size1of5 { width:20%; }
+.size2of5 { width:40%; }
+.size3of5 { width:60%; }
+.size4of5 { width:80%; }
 
-.lastUnit {
+.unit-last {
 	float:none;
 	width:auto;
 	_position:relative;
@@ -551,8 +646,8 @@ h6, .h6 {
 /***
  * BLOCK MODULE
  * -
- * Inspired by https://github.com/stubbornella/oocss/blob/master/core/media/media.css
- * Added fix to overflow:hidden issues
+ * Inspired by: https://github.com/stubbornella/oocss/blob/master/core/media/media.css
+ * Added fix to overflow:hidden issues.
  */
 .block {
 	display:block;
@@ -585,4 +680,27 @@ h6, .h6 {
 
 .block .media .img {
 	display:block;
+}
+
+/***
+ * NAV MODULE
+ * -
+ * Horizontal nav module (navs, breadcrumbs, ...)
+ */
+.nav {
+
+	/* Reset list */
+	margin:0;
+	list-style:none;
+	padding:0;
+
+	/* Add clearfix (.cf) to .nav element if needed */
+}
+
+.nav .item {
+	float:left;
+}
+
+.nav .a {
+	float:left;
 }
