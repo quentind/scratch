@@ -5,6 +5,15 @@
    ==================================================== */
 
 /***
+ * Sprite
+ * - 
+ * Add sprite background to an element, but hidden
+ */
+.s {
+	background:url(../img/sprite.png) no-repeat 0 -9999px;
+}
+
+/***
  * Image replacement
  */
 .ir {
