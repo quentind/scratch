@@ -1,6 +1,10 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
+	var cssName = 'style'
+	  , jsName = 'main'
+	;
+
 	// Project configuration.
 	grunt.initConfig({
 		pkg: '<json:package.json>',
@@ -29,8 +33,10 @@ module.exports = function(grunt) {
 					'<banner:meta.banner>',
 					'_dev/js/main.js'
 				],
-				//dest: '_static/js/<%= pkg.name %>-<%= pkg.version %>.js'
-				dest: '_static/js/<%= pkg.jsname %>.js'
+				// Use version number
+				//dest: '_static/js/' + jsName + '-<%= pkg.version %>.js'
+				// Doesnt use version number
+				dest: '_static/js/' + jsName + '.js'
 			},
 			// CSS FILES
 			css: {
@@ -41,8 +47,10 @@ module.exports = function(grunt) {
 					'_dev/css/typography.css',
 					'_dev/css/layout.css'
 				],
-				//dest: '_static/css/<%= pkg.name %>-<%= pkg.version %>.css'
-				dest: '_static/css/<%= pkg.cssname %>.css'
+				// Use version number
+				//dest: '_static/css/' + cssName + '-<%= pkg.version %>.css'
+				// Doesnt use version number
+				dest: '_static/css/' + cssName + '.css'
 			}
 		},
 
@@ -54,8 +62,10 @@ module.exports = function(grunt) {
 					'<banner:meta.banner>',
 					'<config:concat.js.dest>'
 				],
-				//dest: '_static/js/<%= pkg.name %>-<%= pkg.version %>.min.js'
-				dest: '_static/js/<%= pkg.jsname %>.min.js'
+				// Use version number
+				//dest: '_static/js/' + jsName + '-<%= pkg.version %>.min.js'
+				// Doesnt use version number
+				dest: '_static/js/' + jsName + '.min.js'
 			}
 		},
 
@@ -67,8 +77,10 @@ module.exports = function(grunt) {
 					'<banner:meta.banner>',
 					'<config:concat.css.dest>'
 				],
-				//dest: '_static/css/<%= pkg.name %>-<%= pkg.version %>.min.css'
-				dest: '_static/css/<%= pkg.cssname %>.min.css'
+				// Use version number
+				//dest: '_static/css/' + cssName + '-<%= pkg.version %>.min.css'
+				// Doesnt use version number
+				dest: '_static/css/' + cssName + '.min.css'
 			}
 		},
 
@@ -76,7 +88,8 @@ module.exports = function(grunt) {
 		jshint: {
 			options: {
 				browser: true,
-				//devel: true, // console, alert
+				// console, alert
+				//devel: true,
 				smarttabs: true,
 				laxbreak: true,
 				laxcomma: true,

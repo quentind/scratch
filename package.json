@@ -1,13 +1,11 @@
 {
-  "name": "Project Name",
+	"name"			: "Project_Name",
+	"title"			: "Project Title",
+	"description"	: "Desc",
+	"version"		: "0.1.0",
 
-  "cssname": "style",
-
-  "jsname": "main",
-  
-  "title": "Project Title",
-  
-  "description": "Desc",
-  
-  "version": "0.1"
+	"dependencies"	: {
+		"grunt-smushit"	: ">=0.3.7",
+		"grunt-css"		: ">=0.2.1"
+	}
 }
