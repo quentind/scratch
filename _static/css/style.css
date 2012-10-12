@@ -1,8 +1,8 @@
 /*** 
  * Project Title 
  * - 
- * Version 0.1 
- * Sunday, October 7th, 2012, 22:37:59
+ * Version 0.1.0 
+ * Friday, October 12th, 2012, 16:21:08
  */
 
 /* normalize.css v2.0.1  MIT License  git.io/normalize */
@@ -385,6 +385,15 @@ table {
    - 
    Helper classes, mostly from H5BP.
    ==================================================== */
+
+/***
+ * Sprite
+ * - 
+ * Add sprite background to an element, but hidden
+ */
+.s {
+	background:url(../img/sprite.png) no-repeat 0 -9999px;
+}
 
 /***
  * Image replacement
