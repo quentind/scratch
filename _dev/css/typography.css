@@ -56,6 +56,13 @@ h6, .h6 {
 }
 
 /***
+ * IMG
+ */
+img {
+	vertical-align:middle;
+}
+
+/***
  * PARAGRAPH
  */
 p {
