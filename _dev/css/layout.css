@@ -33,6 +33,7 @@
 	 */
 	[class*='grid_col-'] {
 		float:left;
+		word-wrap:break-word;
 	}
 
 		/* Sizes */
