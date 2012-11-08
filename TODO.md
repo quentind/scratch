@@ -8,6 +8,6 @@
 - Add grunt-ftp
 - webkit appearence
 - word-break in block_body
-- fix grid in opera
+- fix grid in opera (test all)
 - Add LAB.js by default (?)
     - Template with latest LAB.js
