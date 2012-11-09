@@ -1,7 +1,7 @@
 # TODO
 
 - Print CSS (?)
-- Rewrite CSS with propoer convention
+- Rewrite CSS with proper naming convention (https://gist.github.com/1309546)
 - Last-child / first-child margins
 - remove txt shadow on select
 - Rewrite with Gruntfile with Grunt 0.4 API
