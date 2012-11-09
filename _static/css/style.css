@@ -2,7 +2,7 @@
  * Project Title 
  * - 
  * Version 0.1.0 
- * Thursday, November 8th, 2012, 17:17:44
+ * Friday, November 9th, 2012, 15:07:50
  */
 
 /* normalize.css v2.0.1  MIT License  git.io/normalize */
@@ -632,16 +632,14 @@ li > ol {
  * GRID SYSTEM
  * -
  */
-.grid {
-}
 
 /*
  * Clearfix the grid
  */
 .grid:before,
 .grid:after {
-	content:" "; /* 1 */
-	display:table; /* 2 */
+	content:" ";
+	display:table;
 }
 
 .grid:after {
@@ -657,6 +655,8 @@ li > ol {
 	 */
 	[class*='grid_col-'] {
 		float:left;
+		word-wrap:break-word;
+		*behavior:url(/_static/polyfill/boxsizing.htc); /* IE7 support for box-sizing */
 	}
 
 		/* Sizes */
@@ -680,11 +680,30 @@ li > ol {
 		.grid_col-5-8 { width:62.5%; }
 		.grid_col-7-8 { width:87.5%; }
 
+		/* Fix for opera shitty rounding of decimal in % size */
+		.grid_col-1-3:last-child,
+		.grid_col-2-3:last-child,
+		.grid_col-1-5:last-child,
+		.grid_col-2-5:last-child,
+		.grid_col-3-5:last-child,
+		.grid_col-4-5:last-child,
+		.grid_col-1-8:last-child,
+		.grid_col-2-4:last-child,
+		.grid_col-3-8:last-child,
+		.grid_col-3-4:last-child,
+		.grid_col-5-8:last-child,
+		.grid_col-7-8:last-child {
+			float:none;
+			display:table-cell;
+			width:10000px;
+			*width:auto;
+			*zoom:1;
+		}
+		
 	/*
 	 * Gutters
 	 * -
-	 * Note: IE8+
-	 * IE7 Support: https://github.com/Schepp/box-sizing-polyfill
+	 * Note: IE8+ support and IE7 Support with: https://github.com/Schepp/box-sizing-polyfill
 	 */
 	.grid--gutter {
 		margin-left:-20px; /* (gutter size) */
