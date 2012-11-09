@@ -2,7 +2,7 @@
  * Project Title 
  * - 
  * Version 0.1.0 
- * Friday, November 9th, 2012, 17:26:56
+ * Friday, November 9th, 2012, 17:30:20
  */
 
 /* normalize.css v2.0.1  MIT License  git.io/normalize */
@@ -632,6 +632,8 @@ li > ol {
  * GRID SYSTEM
  * -
  */
+.grid {
+}
 
 /*
  * Clearfix the grid
