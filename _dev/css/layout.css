@@ -70,9 +70,7 @@
 			*zoom:1;	
 		}
 
-		/*
-		 * Nested columns on small screens
-		 */
+		/* Nested columns on small screens */
 		@media all and (max-width:769px) {
 			.grid .grid [class*='grid_col-'],
 			.grid .grid [class*='grid_col-']:last-child {
@@ -98,9 +96,6 @@
 			-webkit-box-sizing:border-box;
 			   -moz-box-sizing:border-box;
 			        box-sizing:border-box;
-		}
-
-		.grid--gutter [class*='grid_col-'] {
 			padding:0 0 20px 20px; /* 0 0 (gutter size) (gutter size) */
 		}
 
