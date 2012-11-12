@@ -4,15 +4,18 @@
    IE: media element (= block), grid
    ==================================================== */
 
+
 /***
  * GRID SYSTEM
  * -
  */
 .grid {
+	word-break:break-all; /* Fix: In Webkit, last column is too wide if a word is wider than the column, which causes the column to wrap */
 }
 
 /*
  * Clearfix the grid
+ * Note: I prefer to duplicate clearfix to avoid 'cf' class on grid elements 
  */
 .grid:before,
 .grid:after {
@@ -59,23 +62,23 @@
 		.grid_col-7-8 { width:87.5%; }
 
 		/* Fix for opera shitty rounding of decimal in % size */
-		.grid_col-1-3:last-child,
-		.grid_col-2-3:last-child,
-		.grid_col-1-5:last-child,
-		.grid_col-2-5:last-child,
-		.grid_col-3-5:last-child,
-		.grid_col-4-5:last-child,
-		.grid_col-1-8:last-child,
-		.grid_col-2-4:last-child,
-		.grid_col-3-8:last-child,
-		.grid_col-3-4:last-child,
-		.grid_col-5-8:last-child,
-		.grid_col-7-8:last-child {
+		[class*='grid_col-']:last-child {
 			float:none;
 			display:table-cell;
 			width:10000px;
 			*width:auto;
-			*zoom:1;
+			*zoom:1;	
+		}
+
+		/*
+		 * Nested columns on small screens
+		 */
+		@media all and (max-width:769px) {
+			.grid .grid [class*='grid_col-'],
+			.grid .grid [class*='grid_col-']:last-child {
+				width:100%;
+				float:left;
+			}
 		}
 		
 	/*
