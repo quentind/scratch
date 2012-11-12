@@ -116,6 +116,13 @@ li > ol {
 }
 
 /***
+ * CAPSLOCK
+ */
+.caps {
+    text-transform:uppercase;
+}
+
+/***
  * MISCELLANEOUS
  */
 .info { cursor:help; }
