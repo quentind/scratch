@@ -6,7 +6,7 @@
 
 
 /***
- * GRID SYSTEM
+ * GRID MODULE
  * -
  */
 .grid {
@@ -70,6 +70,11 @@
 			*zoom:1;	
 		}
 
+		[class*='grid_col-']:first-child:last-child {
+			display:block;
+			width:auto;
+		}
+
 		/* Nested columns on small screens */
 		@media all and (max-width:769px) {
 			.grid .grid [class*='grid_col-'],
@@ -99,7 +104,7 @@
 			padding:0 0 20px 20px; /* 0 0 (gutter size) (gutter size) */
 		}
 
-		.grid--gutter .grid:last-child [class*='grid_col-'] {
+		.grid--gutter .grid:last-child > [class*='grid_col-'] {
 			padding-bottom:0;
 		}
 
@@ -146,7 +151,7 @@
 /***
  * NAV MODULE
  * -
- * Horizontal nav module (navs, breadcrumbs, ...)
+ * Horizontal nav module (navs, breadcrumbs, thumbnails ...)
  */
 .nav {
 
