@@ -123,11 +123,11 @@ li > ol {
 }
 
 /***
- * MISCELLANEOUS
+ * MOUSE CURSOR
  */
-.info { cursor:help; }
-.wait { cursor:wait; }
-.drag { cursor:move; }
-.drag-h { cursor:w-resize; }
-.drag-v { cursor:n-resize; }
+.m-info { cursor:help; }
+.m-wait { cursor:wait; }
+.m-drag { cursor:move; }
+.m-drag-h { cursor:w-resize; }
+.m-drag-v { cursor:n-resize; }
 
