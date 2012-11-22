@@ -1,0 +1,48 @@
+/***
+ * BLOCK OBJECT
+ * ============
+ *
+ * @name         block
+ * @desc         Nestable object with left-aligned media and right-aligned body
+ * @author       quentind
+ * @tested       IE7+
+ * @requires     -
+ * @note         Inspired by: https://github.com/stubbornella/oocss/blob/master/core/media/media.css
+ */
+.block {
+	display:block;
+}
+
+.block:before,
+.block:after {
+	content:"";
+	display:table;
+}
+
+.block:after {
+	clear:both;
+}
+
+.block .block {
+	margin:0;
+}
+
+	.block__body {
+		display:table-cell;
+		width:10000px;
+		*width:auto;
+		*zoom:1;
+	}
+
+	.block__media {
+		float:left;
+	}
+
+	/* Right media modifier */ 
+	.block__media--right {
+		float:right;
+	}
+
+	.block__media img {
+		display:block;
+	}

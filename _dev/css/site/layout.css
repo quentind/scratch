@@ -1,0 +1,12 @@
+/***
+ * LAYOUT
+ * ======
+ *
+ * @desc         General layout rules
+ * @author       quentind
+ * @tested       IE7+
+ * @requires     -
+ */
+html {
+	overflow-y:scroll;
+}

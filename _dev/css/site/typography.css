@@ -1,0 +1,104 @@
+/***
+ * TYPOGRAPHY
+ * ==========
+ *
+ * @desc         General typography rules
+ * @author       quentind
+ * @tested       IE7+
+ * @requires     -
+ */
+
+/***
+ * HEADINGS
+ */
+h1, .h1 {
+
+	/* Position */
+	margin:0 0 .75em;
+
+	/* Text */
+	font-size:;
+	font-weight:;
+	line-height:1em;
+}
+
+h2, .h2 {
+	
+	/* Text */
+	font-size:;
+	font-weight:;
+}
+
+h3, .h3 {
+	
+	/* Text */
+	font-size:;
+	font-weight:;
+}
+
+h4, .h4 {
+	
+	/* Text */
+	font-size:;
+	font-weight:;
+}
+
+h5, .h5 {
+	
+	/* Text */
+	font-size:;
+	font-weight:;
+}
+
+h6, .h6 {
+	
+	/* Text */
+	font-size:;
+	font-weight:;
+}
+
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+
+	/* Position */
+	margin:1em 0 .5em;
+
+	/* Text */
+	line-height:1em;
+}
+
+/***
+ * IMG
+ */
+img {
+	vertical-align:middle;
+	max-width:100%;
+    height:auto;
+}
+
+a > img,
+figure > img {
+	display:block;
+}
+
+/***
+ * PARAGRAPH
+ */
+p {
+	margin:0 0 1em;
+}
+
+p:last-child {
+	margin:0;
+}
+
+/*** 
+ * LISTS
+ */
+li > ul,
+li > ol {
+	margin-bottom:0;
+}

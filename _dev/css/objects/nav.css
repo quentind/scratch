@@ -1,0 +1,41 @@
+/***
+ * NAV OBJECT
+ * ==========
+ *
+ * @name         nav
+ * @desc         Horizontaly alignes items (nav, breadcrumbs, ...)
+ * @author       quentind
+ * @tested       IE7+
+ * @requires     -
+ */
+.nav {
+
+	/* Reset list, just in case */
+	margin:0;
+	list-style:none;
+	padding:0;
+}
+
+/*
+ * Clearfix the grid
+ */
+.nav:before,
+.nav:after {
+	content:" ";
+	display:table;
+}
+
+.nav:after {
+	clear:both;
+}
+
+.nav {
+	*zoom:1;
+}
+
+.nav__item,
+.nav__link,
+.nav > li,
+.nav a {
+	float:left;
+}

@@ -1,0 +1,42 @@
+/***
+ * TYPOGRAPHY HELPER CLASSES
+ * =========================
+ *
+ * @desc         Generic helper classes for styling content.
+ * @author       quentind
+ * @tested       IE7+
+ * @requires     -
+ */
+
+/***
+ * LIST
+ */
+.no-list {
+
+	/* Reset list */
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+/***
+ * TEXT ALIGN
+ */
+.t-r { text-align:right; }
+.t-c { text-align:center; }
+.t-j {
+	text-align:justify;
+
+	/* Better add lang attr on HTML tag to specify hyphenation dictionary (HTTP header is OK too). */
+	/* OS language settings quirks (ie. "Australian English" as default language), see comments in: http://blog.fontdeck.com/post/9037028497/hyphens */
+	-webkit-hyphens:auto;
+	   -moz-hyphens:auto;
+			hyphens:auto;
+}
+
+/***
+ * CAPSLOCK
+ */
+.caps {
+    text-transform:uppercase;
+}

@@ -1,0 +1,47 @@
+/***
+ * ICON
+ * ====
+ *
+ * @name         i
+ * @desc         Creates an inline icon 
+ * @author       quentind
+ * @tested       IE7+
+ * @requires     -
+ */
+.i,
+[class*="i--"] {
+
+	/* Position */
+	margin-top:-1px;
+
+	/* Box Model */
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	height:16px;
+	width:16px;
+	
+	/* Text */
+	line-height:16px;
+	vertical-align:middle;
+
+	/* Visual */
+	background:url(/_static/img/i.png) no-repeat 0 -9999px;
+}
+
+/*
+ * Icon list
+ * -
+ */
+
+/*
+
+HTML:
+	<a><i class="i i--print"></i> Label</a>
+
+CSS:
+	.i--print {
+    	background-position:0 0;
+	}
+
+*/
