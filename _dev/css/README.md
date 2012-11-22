@@ -9,6 +9,7 @@ The folders are organized in a way that separates CSS files based on their role,
 * Normalize workflow among a team.
 
 4 roles are differentiated:
+
 1. base
 2. objects
 3. site
