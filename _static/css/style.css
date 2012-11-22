@@ -2,7 +2,7 @@
  * Project Title 
  * - 
  * Version 0.1.0 
- * Thursday, November 22nd, 2012, 10:50:11
+ * Thursday, November 22nd, 2012, 10:58:04
  */
 
 /* normalize.css v2.0.1  MIT License  git.io/normalize */
@@ -587,6 +587,7 @@ table {
 		width:10000px;
 		*width:auto;
 		*zoom:1;
+		word-break:break-all;
 	}
 
 	.block__media {
