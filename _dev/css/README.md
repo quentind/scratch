@@ -27,7 +27,7 @@ Files creating and extending objects.
 Objects are **repeating visual patterns** that can be abstracted to a specific HTML and CSS snippet. Once created objects can be reused throughout the project.
 For more information about objects, see [OOCSS Wiki](https://github.com/stubbornella/oocss/wiki).
 
-Note: you usualy only modify the ´extend´ part of these files.
+Note: you usualy only modify the ´´extend´´ part of these files.
 
 ### 3. site
 Files containing very general rules that are specific to the project/site, such as:
@@ -42,10 +42,10 @@ Files creating modules specific to your project.
 
 A module is an independent and self-contained element that can be combined with other elements of the same nature and that aims to fullfil a specific function.
 
-´Module´s are usually combined with ´objects´ in order to achieve a specific layout. However, a module should not require an object.
-Thus, a ´news´ module should indifferently be combinable with a ´block´ or a ´nav´ object.
+´´Module´´s are usually combined with ´´objects´´ in order to achieve a specific layout. However, a module should not require an object.
+Thus, a ´´news´´ module should indifferently be combinable with a ´´block´´ or a ´´nav´´ object.
 
-Note: The ´module´ concept here isn't the same as the ´mod´ concept in OOCSS.
+Note: The ´´module´´ concept here isn't the same as the ´´mod´´ concept in OOCSS.
 
 ## Concatenation order
 The files should be compiled in this order:
