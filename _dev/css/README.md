@@ -4,7 +4,7 @@ CSS folder structure
 ## Concept
 The folders are organized in a way that separates CSS files based on their role, in order to:
 
-* Use OOCSS principles.
+* Use [OOCSS](https://github.com/stubbornella/oocss) principles.
 * Improve project maintainabilty.
 * Normalize workflow among a team.
 
