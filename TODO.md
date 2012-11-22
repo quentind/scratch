@@ -1,5 +1,6 @@
 # TODO
 
+- Add readme.md in all folder
 - Print CSS (?)
 - General last-child / first-child margins
 - Remove txt shadow on select
