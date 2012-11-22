@@ -31,7 +31,7 @@
 	/* OS language settings quirks (ie. "Australian English" as default language), see comments in: http://blog.fontdeck.com/post/9037028497/hyphens */
 	-webkit-hyphens:auto;
 	   -moz-hyphens:auto;
-			hyphens:auto;
+	        hyphens:auto;
 }
 
 /***
