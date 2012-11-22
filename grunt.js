@@ -21,7 +21,8 @@ module.exports = function(grunt) {
 		lint: {
 			files: [
 				'grunt.js',
-				'_dev/js/*.js'
+				'_dev/js/*.js',
+				'_dev/js/*/*.js'
 			]
 		},
 
@@ -42,10 +43,20 @@ module.exports = function(grunt) {
 			css: {
 				src: [
 					'<banner:meta.banner>',
-					'_dev/css/normalize.css',
-					'_dev/css/helper.css',
-					'_dev/css/typography.css',
-					'_dev/css/layout.css'
+					
+					// Base
+					'_dev/css/base/normalize.css',
+					'_dev/css/base/helper.css',
+					'_dev/css/base/helper-typography.css',
+
+					// Objects
+					'_dev/css/objects/*.css',
+
+					// Site
+					'_dev/css/site/*.css',
+
+					// Modules
+					'_dev/css/modules/*.css'
 				],
 				// Use version number
 				//dest: '_static/css/' + cssName + '-<%= pkg.version %>.css'
