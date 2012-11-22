@@ -2,7 +2,7 @@
  * Project Title 
  * - 
  * Version 0.1.0 
- * Monday, November 12th, 2012, 15:03:55
+ * Thursday, November 22nd, 2012, 10:50:11
  */
 
 /* normalize.css v2.0.1  MIT License  git.io/normalize */
@@ -380,16 +380,20 @@ table {
  border-collapse: collapse;
  border-spacing: 0;
 }
-/* ====================================================
-   HELPER
-   - 
-   Helper classes, mostly from H5BP.
-   ==================================================== */
+/***
+ * HELPER CLASSES
+ * ==============
+ *
+ * @desc         Generic helper classes, in large part from H5BP
+ * @author       quentind
+ * @tested       IE7+
+ * @requires     -
+ */
 
 /***
  * Sprite
  * - 
- * Add sprite background to an element, but hidden
+ * Add sprite background to an element (hidden)
  */
 .s {
 	background:url(../img/sprite.png) no-repeat 0 -9999px;
@@ -397,13 +401,14 @@ table {
 
 /***
  * Image replacement
+ * -
+ * Hide text from an element (usually in order to apply a background image)
  */
 .ir {
 	background-color:transparent;
 	border:0;
 	overflow:hidden;
-	/* IE 6/7 fallback */
-	*text-indent:-9999px;
+	*text-indent:-9999px; /* IE 6/7 fallback */
 }
 
 .ir:before {
@@ -488,18 +493,394 @@ table {
 /***
  * Floats
  */
-.f-right {
+.f-right,
+.right {
 	float:right;
 }
 
-.f-left {
+.f-left,
+.left {
 	float:left;
 }
-/* ====================================================
-   TYPOGRAPHY
-   - 
-   Define basic styles for 'content' elements.
-   ==================================================== */
+
+/***
+ * MOUSE CURSOR
+ */
+.cur-info { cursor:help; }
+.cur-wait { cursor:wait; }
+.cur-drag { cursor:move; }
+.cur-drag-h { cursor:w-resize; }
+.cur-drag-v { cursor:n-resize; }
+/***
+ * TYPOGRAPHY HELPER CLASSES
+ * =========================
+ *
+ * @desc         Generic helper classes for styling content.
+ * @author       quentind
+ * @tested       IE7+
+ * @requires     -
+ */
+
+/***
+ * LIST
+ */
+.no-list {
+
+	/* Reset list */
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+/***
+ * TEXT ALIGN
+ */
+.t-r { text-align:right; }
+.t-c { text-align:center; }
+.t-j {
+	text-align:justify;
+
+	/* Better add lang attr on HTML tag to specify hyphenation dictionary (HTTP header is OK too). */
+	/* OS language settings quirks (ie. "Australian English" as default language), see comments in: http://blog.fontdeck.com/post/9037028497/hyphens */
+	-webkit-hyphens:auto;
+	   -moz-hyphens:auto;
+			hyphens:auto;
+}
+
+/***
+ * CAPSLOCK
+ */
+.caps {
+    text-transform:uppercase;
+}
+/***
+ * BLOCK OBJECT
+ * ============
+ *
+ * @name         block
+ * @desc         Nestable object with left-aligned media and right-aligned body
+ * @author       quentind
+ * @tested       IE7+
+ * @requires     -
+ * @note         Inspired by: https://github.com/stubbornella/oocss/blob/master/core/media/media.css
+ */
+.block {
+	display:block;
+}
+
+.block:before,
+.block:after {
+	content:"";
+	display:table;
+}
+
+.block:after {
+	clear:both;
+}
+
+.block .block {
+	margin:0;
+}
+
+	.block__body {
+		display:table-cell;
+		width:10000px;
+		*width:auto;
+		*zoom:1;
+	}
+
+	.block__media {
+		float:left;
+	}
+
+	/* Right media modifier */ 
+	.block__media--right {
+		float:right;
+	}
+
+	.block__media img {
+		display:block;
+	}
+/***
+ * BUTTON OBJECT
+ * =============
+ *
+ * @name         btn
+ * @desc         Default button
+ * @author       quentind
+ * @tested       IE7+
+ * @requires     -
+ */
+.btn {
+
+	/* Position */
+	margin:0;
+
+	/* Box Model */
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	padding:.25em 1em;
+	
+	/* Visual */
+	border:none; /* <input>, <buttons> */
+	background:none;
+	-webkit-appearance:none;
+
+	/* Text */
+	font:inherit;
+	line-height:1;
+
+	/* Behaviour */
+	cursor:pointer;
+}
+
+.btn,
+.btn:hover {
+	text-decoration:none;
+}
+
+/**
+ * 100% width button
+ */
+.btn--100 {
+
+	/* Box Model */
+	display:block;
+	padding-left:0;
+	padding-right:0;
+	width:100%;
+
+	/* Text */
+	text-align:center;
+}
+/***
+ * GRID OBJECT
+ * ===========
+ *
+ * @name         grid
+ * @desc         Fluid grid layout with optional fixed gutters
+ * @author       quentind
+ * @tested       IE7+
+ * @requires     
+ */
+.grid {
+	word-break:break-all; /* Fix: In Webkit, last column is too wide if a word is wider than the column, which causes the column to wrap */
+}
+
+/*
+ * Clearfix the grid
+ */
+.grid:before,
+.grid:after {
+	content:" ";
+	display:table;
+}
+
+.grid:after {
+	clear:both;
+}
+
+.grid {
+	*zoom:1;
+}
+
+	/*
+	 * Columns
+	 */
+	[class*='grid__col-'] {
+		float:left;
+		word-wrap:break-word;
+	}
+
+		/* Sizes */
+		.grid__col-1-1 { width:100%; }
+
+		.grid__col-1-2 { width:50%; }
+
+		.grid__col-1-3 { width:33.3334%; }
+		.grid__col-2-3 { width:66.6667%; }
+
+		.grid__col-1-4 { width:25%; }
+		.grid__col-3-4 { width:75%; }
+
+		.grid__col-1-5 { width:20%; }
+		.grid__col-2-5 { width:40%; }
+		.grid__col-3-5 { width:60%; }
+		.grid__col-4-5 { width:80%; }
+		
+		.grid__col-1-8 { width:12.5%; }
+		.grid__col-3-8 { width:37.5%; }
+		.grid__col-5-8 { width:62.5%; }
+		.grid__col-7-8 { width:87.5%; }
+
+		/* Fix for opera shitty rounding of decimal in % sizes */
+		[class*='grid__col-']:last-child {
+			float:none;
+			display:table-cell;
+			width:10000px;
+			*width:auto;
+			*zoom:1;	
+		}
+
+		[class*='grid__col-']:first-child:last-child {
+			display:block;
+			width:auto;
+		}
+
+		/* Nested columns on small screens have 100% width */
+		@media all and (max-width:769px) {
+			.grid .grid [class*='grid__col-'],
+			.grid .grid [class*='grid__col-']:last-child {
+				width:100%;
+				float:left;
+			}
+		}
+		
+/*
+ * Gutters
+ * -
+ * Extends grid
+ * Note: IE8+ support and IE7 Support with: https://github.com/Schepp/box-sizing-polyfill
+ */
+.grid--gutter {
+	margin-left:-20px; /* (gutter size) */
+}
+
+	.grid--gutter .grid {
+		margin-left:-20px; /* (gutter size) */
+	}
+
+	.grid--gutter [class*='grid__col-'] {
+		-webkit-box-sizing:border-box;
+		   -moz-box-sizing:border-box;
+		        box-sizing:border-box;
+		padding:0 0 20px 20px; /* 0 0 (gutter size) (gutter size) */
+		*behavior:url(/_static/polyfill/boxsizing.htc); /* IE7 support for box-sizing */
+	}
+
+	.grid--gutter .grid:last-child > [class*='grid__col-'] {
+		padding-bottom:0;
+	}
+/***
+ * ICON
+ * ====
+ *
+ * @name         i
+ * @desc         Creates an inline icon 
+ * @author       quentind
+ * @tested       IE7+
+ * @requires     -
+ */
+.i,
+[class*="i--"] {
+
+	/* Position */
+	margin-top:-1px;
+
+	/* Box Model */
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	height:16px;
+	width:16px;
+	
+	/* Text */
+	line-height:16px;
+	vertical-align:middle;
+
+	/* Visual */
+	background:url(/_static/img/i.png) no-repeat 0 -9999px;
+}
+
+/*
+ * Icon list
+ * -
+ */
+
+/*
+
+HTML:
+	<a><i class="i i--print"></i> Label</a>
+
+CSS:
+	.i--print {
+    	background-position:0 0;
+	}
+
+*/
+/***
+ * NAV OBJECT
+ * ==========
+ *
+ * @name         nav
+ * @desc         Horizontaly alignes items (nav, breadcrumbs, ...)
+ * @author       quentind
+ * @tested       IE7+
+ * @requires     -
+ */
+.nav {
+
+	/* Reset list, just in case */
+	margin:0;
+	list-style:none;
+	padding:0;
+}
+
+/*
+ * Clearfix the grid
+ */
+.nav:before,
+.nav:after {
+	content:" ";
+	display:table;
+}
+
+.nav:after {
+	clear:both;
+}
+
+.nav {
+	*zoom:1;
+}
+
+.nav__item,
+.nav__link,
+.nav > li,
+.nav a {
+	float:left;
+}
+/***
+ * LAYOUT
+ * ======
+ *
+ * @desc         General layout rules
+ * @author       quentind
+ * @tested       IE7+
+ * @requires     -
+ */
+html {
+	overflow-y:scroll;
+}
+/***
+ * SPACING
+ * =======
+ *
+ * @desc         General spacing rules
+ * @author       quentind
+ * @tested       IE7+
+ * @requires     -
+ */
+
+/***
+ * TYPOGRAPHY
+ * ==========
+ *
+ * @desc         General typography rules
+ * @author       quentind
+ * @tested       IE7+
+ * @requires     -
+ */
 
 /***
  * HEADINGS
@@ -568,6 +949,13 @@ h6, .h6 {
  */
 img {
 	vertical-align:middle;
+	max-width:100%;
+    height:auto;
+}
+
+a > img,
+figure > img {
+	display:block;
 }
 
 /***
@@ -584,232 +972,7 @@ p:last-child {
 /*** 
  * LISTS
  */
-.no-list {
-
-	/* Reset list */
-	margin:0;
-	padding:0;
-	list-style:none;
-}
-
 li > ul,
 li > ol {
 	margin-bottom:0;
-}
-
-/***
- * TEXT ALIGN
- */
-.t-r { text-align:right; }
-.t-c { text-align:center; }
-.t-j {
-	text-align:justify;
-
-	/* Better add lang attr on HTML tag to specify hyphenation dictionary (HTTP header is OK too). */
-	/* OS language settings quirks (ie. "Australian English" as default language), see comments in: http://blog.fontdeck.com/post/9037028497/hyphens */
-	-webkit-hyphens:auto;
-	   -moz-hyphens:auto;
-			hyphens:auto;
-}
-
-/***
- * CAPSLOCK
- */
-.caps {
-    text-transform:uppercase;
-}
-
-/***
- * MISCELLANEOUS
- */
-.info { cursor:help; }
-.wait { cursor:wait; }
-.drag { cursor:move; }
-.drag-h { cursor:w-resize; }
-.drag-v { cursor:n-resize; }
-
-
-/* ====================================================
-   LAYOUT MODULES
-   - 
-   IE: media element (= block), grid
-   ==================================================== */
-
-
-/***
- * GRID MODULE
- * -
- */
-.grid {
-	word-break:break-all; /* Fix: In Webkit, last column is too wide if a word is wider than the column, which causes the column to wrap */
-}
-
-/*
- * Clearfix the grid
- */
-.grid:before,
-.grid:after {
-	content:" ";
-	display:table;
-}
-
-.grid:after {
-	clear:both;
-}
-
-.grid {
-	*zoom:1;
-}
-
-	/*
-	 * Columns
-	 */
-	[class*='grid__col-'] {
-		float:left;
-		word-wrap:break-word;
-		*behavior:url(/_static/polyfill/boxsizing.htc); /* IE7 support for box-sizing */
-	}
-
-		/* Sizes */
-		.grid__col-1-1 { width:100%; }
-
-		.grid__col-1-2 { width:50%; }
-
-		.grid__col-1-3 { width:33.3334%; }
-		.grid__col-2-3 { width:66.6667%; }
-
-		.grid__col-1-4 { width:25%; }
-		.grid__col-3-4 { width:75%; }
-
-		.grid__col-1-5 { width:20%; }
-		.grid__col-2-5 { width:40%; }
-		.grid__col-3-5 { width:60%; }
-		.grid__col-4-5 { width:80%; }
-		
-		.grid__col-1-8 { width:12.5%; }
-		.grid__col-3-8 { width:37.5%; }
-		.grid__col-5-8 { width:62.5%; }
-		.grid__col-7-8 { width:87.5%; }
-
-		/* Fix for opera shitty rounding of decimal in % sizes */
-		[class*='grid__col-']:last-child {
-			float:none;
-			display:table-cell;
-			width:10000px;
-			*width:auto;
-			*zoom:1;	
-		}
-
-		[class*='grid__col-']:first-child:last-child {
-			display:block;
-			width:auto;
-		}
-
-		/* Nested columns on small screens have 100% width */
-		@media all and (max-width:769px) {
-			.grid .grid [class*='grid__col-'],
-			.grid .grid [class*='grid__col-']:last-child {
-				width:100%;
-				float:left;
-			}
-		}
-		
-	/*
-	 * Gutters
-	 * -
-	 * Extends .grid
-	 * Note: IE8+ support and IE7 Support with: https://github.com/Schepp/box-sizing-polyfill
-	 */
-	.grid--gutter {
-		margin-left:-20px; /* (gutter size) */
-	}
-
-		.grid--gutter .grid {
-			margin-left:-20px; /* (gutter size) */
-		}
-
-		.grid--gutter [class*='grid__col-'] {
-			-webkit-box-sizing:border-box;
-			   -moz-box-sizing:border-box;
-			        box-sizing:border-box;
-			padding:0 0 20px 20px; /* 0 0 (gutter size) (gutter size) */
-		}
-
-		.grid--gutter .grid:last-child > [class*='grid__col-'] {
-			padding-bottom:0;
-		}
-
-
-/***
- * BLOCK MODULE
- * -
- * Inspired by: https://github.com/stubbornella/oocss/blob/master/core/media/media.css
- * Added fix to overflow:hidden issues.
- */
-.block {
-	display:block;
-}
-
-.block:before,
-.block:after {
-	content:"";
-	display:table;
-}
-
-.block:after {
-	clear:both;
-}
-
-.block .block {
-	margin:0;
-}
-
-	.block__body {
-		display:table-cell;
-		width:10000px;
-		*width:auto;
-		*zoom:1;
-	}
-
-	.block__media {
-		float:left;
-	}
-
-	.block__media img {
-		display:block;
-	}
-
-/***
- * NAV MODULE
- * -
- * Horizontal nav module (navs, breadcrumbs, thumbnails ...)
- */
-.nav {
-
-	/* Reset list */
-	margin:0;
-	list-style:none;
-	padding:0;
-}
-
-/*
- * Clearfix the grid
- */
-.nav:before,
-.nav:after {
-	content:" ";
-	display:table;
-}
-
-.nav:after {
-	clear:both;
-}
-
-.nav {
-	*zoom:1;
-}
-
-.nav__item,
-.nav__link {
-	float:left;
 }
