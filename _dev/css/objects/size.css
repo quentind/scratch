@@ -1,0 +1,32 @@
+/***
+ * SIZE OBJECT
+ * ===========
+ *
+ * @name         size
+ * @desc         set the width of an element
+ * @author       quentind
+ * @tested       IE7+
+ * @requires     
+ */
+.size-1-1 { width:100%; }
+
+.size-1-2 { width:50%; }
+
+.size-1-3 { width:33.3334%; }
+.size-2-3 { width:66.6667%; }
+
+.size-1-4 { width:25%; }
+.size-3-4 { width:75%; }
+
+.size-1-5 { width:20%; }
+.size-2-5 { width:40%; }
+.size-3-5 { width:60%; }
+.size-4-5 { width:80%; }
+
+.size-1-6 { width:16.6666%; }
+.size-5-6 { width:83.3333%; }
+
+.size-1-8 { width:12.5%; }
+.size-3-8 { width:37.5%; }
+.size-5-8 { width:62.5%; }
+.size-7-8 { width:87.5%; }
