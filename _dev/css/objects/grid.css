@@ -9,7 +9,6 @@
  * @requires     
  */
 .grid {
-	word-break:break-all; /* Fix: In Webkit, last column is too wide if a word is wider than the column, which causes the column to wrap */
 }
 
 /*
