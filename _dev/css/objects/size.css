@@ -8,6 +8,13 @@
  * @tested       IE7+
  * @requires     
  */
+[class*='size-'] {
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+	*behavior:url(/_static/polyfill/boxsizing.htc); /* IE7 support for box-sizing */
+}
+
 .size-1-1 { width:100%; }
 
 .size-1-2 { width:50%; }
