@@ -16,9 +16,7 @@
 	padding:0;
 }
 
-/*
- * Clearfix the grid
- */
+/* Clearfix the nav */
 .nav:before,
 .nav:after {
 	content:" ";
@@ -33,8 +31,19 @@
 	*zoom:1;
 }
 
-.nav__item,
-.nav__link,
-.nav > li {
-	float:left;
+	.nav > li,
+	.nav__item {
+		float:left;
+	}
+
+/*
+ * With gutters
+ */
+.nav--gutter {
+	margin-left:-20px; /* (gutter size) */
 }
+
+	.nav--gutter > li,
+	.nav--gutter .nav__item {
+		padding:0 0 20px 20px; /* 0 0 (gutter size) (gutter size) */
+	}
