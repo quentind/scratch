@@ -35,7 +35,6 @@
 
 .nav__item,
 .nav__link,
-.nav > li,
-.nav a {
+.nav > li {
 	float:left;
 }
