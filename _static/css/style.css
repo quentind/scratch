@@ -2,7 +2,7 @@
  * Project Title 
  * - 
  * Version 0.1.0 
- * Thursday, November 22nd, 2012, 10:58:04
+ * Wednesday, November 28th, 2012, 14:02:12
  */
 
 /* normalize.css v2.0.1  MIT License  git.io/normalize */
@@ -544,7 +544,7 @@ table {
 	/* OS language settings quirks (ie. "Australian English" as default language), see comments in: http://blog.fontdeck.com/post/9037028497/hyphens */
 	-webkit-hyphens:auto;
 	   -moz-hyphens:auto;
-			hyphens:auto;
+	        hyphens:auto;
 }
 
 /***
@@ -666,7 +666,6 @@ table {
  * @requires     
  */
 .grid {
-	word-break:break-all; /* Fix: In Webkit, last column is too wide if a word is wider than the column, which causes the column to wrap */
 }
 
 /*
@@ -689,34 +688,18 @@ table {
 	/*
 	 * Columns
 	 */
-	[class*='grid__col-'] {
+	.grid__col {
 		float:left;
 		word-wrap:break-word;
+
+		-webkit-box-sizing:border-box;
+		   -moz-box-sizing:border-box;
+		        box-sizing:border-box;
+		*behavior:url(/_static/polyfill/boxsizing.htc); /* IE7 support for box-sizing */
 	}
 
-		/* Sizes */
-		.grid__col-1-1 { width:100%; }
-
-		.grid__col-1-2 { width:50%; }
-
-		.grid__col-1-3 { width:33.3334%; }
-		.grid__col-2-3 { width:66.6667%; }
-
-		.grid__col-1-4 { width:25%; }
-		.grid__col-3-4 { width:75%; }
-
-		.grid__col-1-5 { width:20%; }
-		.grid__col-2-5 { width:40%; }
-		.grid__col-3-5 { width:60%; }
-		.grid__col-4-5 { width:80%; }
-		
-		.grid__col-1-8 { width:12.5%; }
-		.grid__col-3-8 { width:37.5%; }
-		.grid__col-5-8 { width:62.5%; }
-		.grid__col-7-8 { width:87.5%; }
-
 		/* Fix for opera shitty rounding of decimal in % sizes */
-		[class*='grid__col-']:last-child {
+		.grid__col:last-child {
 			float:none;
 			display:table-cell;
 			width:10000px;
@@ -724,15 +707,15 @@ table {
 			*zoom:1;	
 		}
 
-		[class*='grid__col-']:first-child:last-child {
+		.grid__col-']:first-child:last-child {
 			display:block;
 			width:auto;
 		}
 
 		/* Nested columns on small screens have 100% width */
 		@media all and (max-width:769px) {
-			.grid .grid [class*='grid__col-'],
-			.grid .grid [class*='grid__col-']:last-child {
+			.grid .grid .grid__col,
+			.grid .grid .grid__col:last-child {
 				width:100%;
 				float:left;
 			}
@@ -752,15 +735,11 @@ table {
 		margin-left:-20px; /* (gutter size) */
 	}
 
-	.grid--gutter [class*='grid__col-'] {
-		-webkit-box-sizing:border-box;
-		   -moz-box-sizing:border-box;
-		        box-sizing:border-box;
+	.grid--gutter .grid__col {
 		padding:0 0 20px 20px; /* 0 0 (gutter size) (gutter size) */
-		*behavior:url(/_static/polyfill/boxsizing.htc); /* IE7 support for box-sizing */
 	}
 
-	.grid--gutter .grid:last-child > [class*='grid__col-'] {
+	.grid--gutter .grid:last-child > .grid__col {
 		padding-bottom:0;
 	}
 /***
@@ -851,6 +830,38 @@ CSS:
 .nav a {
 	float:left;
 }
+/***
+ * SIZE OBJECT
+ * ===========
+ *
+ * @name         size
+ * @desc         set the width of an element
+ * @author       quentind
+ * @tested       IE7+
+ * @requires     
+ */
+.size-1-1 { width:100%; }
+
+.size-1-2 { width:50%; }
+
+.size-1-3 { width:33.3334%; }
+.size-2-3 { width:66.6667%; }
+
+.size-1-4 { width:25%; }
+.size-3-4 { width:75%; }
+
+.size-1-5 { width:20%; }
+.size-2-5 { width:40%; }
+.size-3-5 { width:60%; }
+.size-4-5 { width:80%; }
+
+.size-1-6 { width:16.6666%; }
+.size-5-6 { width:83.3333%; }
+
+.size-1-8 { width:12.5%; }
+.size-3-8 { width:37.5%; }
+.size-5-8 { width:62.5%; }
+.size-7-8 { width:87.5%; }
 /***
  * LAYOUT
  * ======
