@@ -4,6 +4,7 @@
  *
  * @name         nav
  * @desc         Horizontaly alignes items (nav, breadcrumbs, ...)
+ *               HTML: `ul.nav li` preferably, or `div.nav div.nav__item`
  * @author       quentind
  * @tested       IE7+
  * @requires     -
