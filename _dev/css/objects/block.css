@@ -32,10 +32,12 @@
 		width:10000px;
 		*width:auto;
 		*zoom:1;
+		margin:0; /* Resets margin: `body` could be a <p> or <li> */
 	}
 
 	.block__media {
 		float:left;
+		margin:0;  /* Resets margin: `media` could be a <p> or <li> */
 	}
 
 	/* Right media modifier */ 
