@@ -70,13 +70,10 @@
  * Extends grid
  * Note: IE8+ support and IE7 Support with: https://github.com/Schepp/box-sizing-polyfill
  */
-.grid--gutter {
+.grid--gutter,
+.grid--gutter .grid {
 	margin-left:-20px; /* (gutter size) */
 }
-
-	.grid--gutter .grid {
-		margin-left:-20px; /* (gutter size) */
-	}
 
 	.grid--gutter .grid__col {
 		padding:0 0 20px 20px; /* 0 0 (gutter size) (gutter size) */
