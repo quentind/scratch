@@ -38,7 +38,6 @@
 		-webkit-box-sizing:border-box;
 		   -moz-box-sizing:border-box;
 		        box-sizing:border-box;
-		*behavior:url(/_static/polyfill/boxsizing.htc); /* IE7 support for box-sizing */
 	}
 
 		/* Fix for opera shitty rounding of decimal in % sizes */
@@ -50,7 +49,7 @@
 			*zoom:1;	
 		}
 
-		.grid__col-']:first-child:last-child {
+		[class*='grid__col-']:first-child:last-child {
 			display:block;
 			width:auto;
 		}
