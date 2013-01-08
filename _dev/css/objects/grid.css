@@ -53,15 +53,6 @@
 			display:block;
 			width:auto;
 		}
-
-		/* Nested columns on small screens have 100% width */
-		@media all and (max-width:769px) {
-			.grid .grid .grid__col,
-			.grid .grid .grid__col:last-child {
-				width:100%;
-				float:left;
-			}
-		}
 		
 /*
  * Gutters
