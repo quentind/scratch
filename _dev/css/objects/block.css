@@ -13,15 +13,20 @@
 	display:block;
 }
 
-.block:before,
-.block:after {
-	content:"";
-	display:table;
-}
+	/* Clearfix the block */
+	.block:before,
+	.block:after {
+		content:"";
+		display:table;
+	}
 
-.block:after {
-	clear:both;
-}
+	.block:after {
+		clear:both;
+	}
+
+	.block {
+		zoom:1;
+	}
 
 .block .block {
 	margin:0;
