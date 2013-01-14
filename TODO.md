@@ -7,3 +7,4 @@
 - Rewrite with Gruntfile with Grunt 0.4 API
 - Add grunt-ftp
 - webkit-appearence:none; where necessary
+- site/form.css (remove form from typography) default styles for forms
