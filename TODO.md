@@ -1,5 +1,6 @@
 # TODO
 
+- object rename -> components (?)
 - Add readme.md in all folder
 - Print CSS (?)
 - General last-child / first-child margins
