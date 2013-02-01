@@ -49,7 +49,7 @@
 			*zoom:1;	
 		}
 
-		[class*='grid__col-']:first-child:last-child {
+		.grid__col:first-child:last-child {
 			display:block;
 			width:auto;
 		}
@@ -58,7 +58,7 @@
  * Gutters
  * -
  * Extends grid
- * Note: IE8+ support and IE7 Support with: https://github.com/Schepp/box-sizing-polyfill
+ * Note: IE7 Support with /polyfills/size-ie7.css (beware: CSS Expressions)
  */
 .grid--gutter,
 .grid--gutter .grid {
