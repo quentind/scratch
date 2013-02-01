@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 		lint: {
 			files: [
 				'grunt.js',
-				'_dev/js/*.js',
+				'_dev/js/*.js'
 			]
 		},
 
